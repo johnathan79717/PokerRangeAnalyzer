@@ -133,17 +133,21 @@ table.stats td {
   text-align: left;
 }
 
+table td {
+  position: relative;
+}
+
+table td.diagonal {
+  border: 1px solid #000000;
+}
 
 table td.event0 {
   background-color: RGB(255, 255, 255);
-  position: relative;
   color: #000000;
 }
 table td.event0p {
   background-color: #ffffff;
   color: #000000;
-  position: relative;
-  border: 1px solid #000000;
 }
 table td.event0a {
   background-color: RGB(255, 255, 255);

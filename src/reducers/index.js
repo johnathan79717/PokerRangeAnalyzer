@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import SelectedHandsReducer from './selected_hands.js'
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  selectedHands: SelectedHandsReducer,
 });
 
 export default rootReducer;
