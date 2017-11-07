@@ -136,26 +136,22 @@ table.stats td {
 
 table td.event0 {
   background-color: RGB(255, 255, 255);
-
+  position: relative;
   color: #000000;
-
 }
 table td.event0p {
   background-color: #ffffff;
   color: #000000;
-
+  position: relative;
+  border: 1px solid #000000;
 }
 table td.event0a {
   background-color: RGB(255, 255, 255);
-
   color: #000000;
-
 }
 table td.event0s {
   background-color: RGB(255, 255, 255);
-
   color: #000000;
-
 }
 
 <br />
