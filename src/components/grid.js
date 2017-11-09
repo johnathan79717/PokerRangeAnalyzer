@@ -9,7 +9,7 @@ export default class Grid extends Component {
     return (
       <table className="grid">
         <tbody>
-          { _.map(_.range(14, 2, -1), this.renderRow.bind(this)) }
+          { _.map(_.range(14, 1, -1), this.renderRow.bind(this)) }
         </tbody>
       </table>
     )
@@ -32,7 +32,7 @@ export default class Grid extends Component {
       <tr key={card1}>
         {
           _.map(
-            _.range(14, 2, -1),
+            _.range(14, 1, -1),
             card2 =>
               <Cell
                 key={`${card1}-${card2}`}
