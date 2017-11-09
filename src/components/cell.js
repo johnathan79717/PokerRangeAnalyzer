@@ -2,11 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { toggleHand } from '../actions.js'
-
-//const OFFSUIT = 'offsuit';
-//const SUITED = 'suited';
-//const PAIR = 'pair';
+import { clickHand } from '../actions.js'
 
 class Cell extends Component {
   isPair() {
@@ -14,15 +10,14 @@ class Cell extends Component {
   }
 
   onClick(event) {
-    this.props.toggleHand(this.props.handStr)
-  }
-
-  isSelected() {
-    return !!this.props.selectedHands[this.props.handStr];
+    console.log("before click")
+    console.log(this.props.handToRange);
+    this.props.clickHand(this.props.handStr, this.props.activeRange)
   }
 
   render() {
-    const className = this.isSelected() ? 'event1a' : 'event0'
+    console.log(this.props.handToRange);
+    const className = `event${this.props.handToRange[this.props.handStr] || 0}a`
     return (
       <td onClick={this.onClick.bind(this)}
           className={`${className} ${this.isPair() ? 'diagonal' : ''}`}>
@@ -34,12 +29,12 @@ class Cell extends Component {
   }
 }
 
-function mapStateToProps({ selectedHands }) {
-  return { selectedHands }
+function mapStateToProps({ handToRange, activeRange }) {
+  return { handToRange, activeRange }
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ toggleHand }, dispatch)
+  return bindActionCreators({ clickHand }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cell)
