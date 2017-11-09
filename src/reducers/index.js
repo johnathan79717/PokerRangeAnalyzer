@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import SelectedHandsReducer from './selected_hands.js'
+import selectedHands from './selected_hands.js'
+import activeRange from './active_range.js'
 
 const rootReducer = combineReducers({
-  selectedHands: SelectedHandsReducer,
+  selectedHands,
+  activeRange,
 });
 
 export default rootReducer;

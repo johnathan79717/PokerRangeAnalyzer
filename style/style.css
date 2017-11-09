@@ -298,3 +298,6 @@ table td.event9s, td.event9h, td.event9d, td.event9c  {
   text-decoration: underline;
 }
 
+table td.range_label {
+   white-space: nowrap;
+}
